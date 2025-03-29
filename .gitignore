@@ -133,3 +133,6 @@ logs/
 
 .idea
 
+*.pth
+
+runs

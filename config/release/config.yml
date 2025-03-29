@@ -1,16 +1,16 @@
-n_step: 4000
+n_step: 2000 #it was 4000 before
 netdepth: 8
-netwidth: 256
+netwidth: 128 #it was 256
 netdepth_fine: 8
-netwidth_fine: 256
-N_rand: 2048         # Batch number of rays
+netwidth_fine: 128 #it was 256
+N_rand: 512 #it was 2048         # Batch number of rays
 first_frame_ray_in_batch: 0
 lrate: 0.01
 lrate_pose: 0.01
 pose_optimize_start: 0
 decay_rate: 0.1
-chunk: 5000099999
-netchunk: 655360
+chunk: 4096 #it was 5000099999
+netchunk: 32768 #it was 655360
 render_chunk: 2048
 no_batching: 0
 amp: true
@@ -33,7 +33,7 @@ vis_discount: 0.5
 correspondence_name: correspondence_loftr/no_filter
 
 train_corr_n_step: 1
-freeze_recon_step: 2000
+freeze_recon_step: 100 #it was 200 before
 
 N_samples: 128     #number of coarse samples per ray
 N_samples_around_depth: 64

@@ -79,6 +79,11 @@ python main.py \\
 ```
 Checkpoints and reconstructions will be written to `runs/exp_${instance}`. Final results can be found in `runs/exp_${instance}/results/step_0004000`, including reconstructed part-level meshes (e.g. `init_part_0.obj`), axis meshes (e.g. `init_axis_0_revolute.obj`), and quantitative evaluations in `all_metrics`.
 
+e.g.
+```bash
+python main.py --data_dir data/multi_part/storage_47254 --cfg_dir config/release/ --num_parts 3 --save_dir runs/pretrained_multi_part_storage_47254
+```
+
 
 ### Inference
 
@@ -95,6 +100,10 @@ python main.py \\
        --ckpt_path runs/pretrained_${dataset}_${instance}/ckpt/model_latest.ckpt \\
        --test_only 
        # --denoise  # enable denoising for real instances including paris/real_storage and paris/real_fridge
+```
+e.g.
+```bash
+python main.py --data_dir data/paris/fridge_10905 --cfg_dir config/release/ --num_parts 2 --save_dir runs/pretrained_paris_fridge_10905 --ckpt_path runs/pretrained_ckpts/pretrained_paris_fridge_10905/ckpt/model_latest.pth --test_only
 ```
 
 ### Evaluation
